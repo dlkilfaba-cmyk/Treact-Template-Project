@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Treact</title>
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="icon" href="./assets/logo.svg" />
   <script src="https://kit.fontawesome.com/52b9614d93.js" crossorigin="anonymous"></script>
   <script src="./script.js" defer></script>
@@ -16,20 +18,20 @@
     <nav>
       <div class="row">
         <div class="nav">
-          <a href="light__NavLink-sc-lj69nl-2 light__LogoLink-sc-lj69nl-6 fjKnrY ibNUxq" class="nav__logo">
+          <a href="#landing" class="nav__logo">
             <figure class="nav__logo--wrapper">
-              <img src="Assets/Assets Folder Treact/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="logo"/>
+              <img src="Assets/Assets Folder Treact/logo.2c489fc453a1783cbadacf914efa3df6.svg" class="nav__logo--img" alt="logo"/>
             </figure>
             <span class="nav__logo--text">Treact</span>
           </a>
           <div class="nav__links">
-            <a href="#about" class="nav__link nav__link--hover transition__underline ">About</a>
-            <a href="#blog" class="nav__link nav__link--hover transition__underline ">Blog</a>
+            <a href="#features" class="nav__link nav__link--hover transition__underline ">About</a>
+            <a href="#testimonials" class="nav__link nav__link--hover transition__underline ">Blog</a>
             <a href="#pricing" class="nav__link nav__link--hover transition__underline ">Pricing</a>
-            <a href="#contact" class="nav__link nav__link--hover transition__underline ">Contact Us</a>
+            <a href="#start" class="nav__link nav__link--hover transition__underline ">Contact Us</a>
             <div class="link--wrapper">
-              <a href="" class="nav__link nav__link--space nav__link--hover transition__underline">Login</a>
-              <a href="" class="nav__link nav__link--primary">Sign Up</a>
+              <a href="#pricing" class="nav__link nav__link--space nav__link--hover transition__underline">Login</a>
+              <a href="#start" class="nav__link nav__link--primary">Sign Up</a>
             </div>
           </div>
           <button type="button" class="btn__open" onclick="menuOpen()" title="Open menu">
@@ -40,12 +42,12 @@
               <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <a href="" class="nav__link nav__link--hover transition__underline nav__link--burger">About</a>
-            <a href="" class="nav__link nav__link--hover transition__underline nav__link--burger">Blog</a>
-            <a href="" class="nav__link nav__link--hover transition__underline nav__link--burger">Pricing</a>
-            <a href="" class="nav__link nav__link--hover transition__underline nav__link--burger">Contact Us</a>
-            <a href="" class="nav__link nav__link--space nav__link--hover transition__underline nav__link--burger">Login</a>
-            <a href="" class="nav__link nav__link--primary nav__link--burger">Sign Up</a>
+            <a href="#features" class="nav__link nav__link--hover transition__underline nav__link--burger nav__link--burger__custom">About</a>
+            <a href="#testimonials" class="nav__link nav__link--hover transition__underline nav__link--burger nav__link--burger__custom">Blog</a>
+            <a href="#pricing" class="nav__link nav__link--hover transition__underline nav__link--burger nav__link--burger__custom">Pricing</a>
+            <a href="#start" class="nav__link nav__link--hover transition__underline nav__link--burger nav__link--burger__custom">Contact Us</a>
+            <a href="#pricing" class="nav__link nav__link--space nav__link--hover transition__underline nav__link--burger nav__link--burger__custom">Login</a>
+            <a href="#start" class="nav__link nav__link--primary nav__link--burger nav__link--burger__custom">Sign Up</a>
           </div>
         </div>
       </div>
@@ -65,11 +67,11 @@
               </p>
               <form class="header__info--email" action="#" method="POST">
                 <input class="email__input" type="email" placeholder="Your E-mail Address" required onclick="lightUp()"/>
-                <button type="submit"> Get Started</button>
+                <button class="email__button" type="submit">Get Started</button>
               </form>
 
               <button class="email__button--mobile">
-                Get&nbsp;Started
+                Get Started
               </button>
 
               <div class="header__info--testimonials">
@@ -77,14 +79,14 @@
                   OUR TRUSTED CUSTOMERS
                 </p>
                 <figure class="testimonials__logo">
-                  <img src="Assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Treact logo"/>
+                  <img src="Assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Trusted Customers" class="testimonials__logo--img" />
                 </figure>
               </div>
             </div>
             <div class="header__logo">
               <figure class="header__logo--wrapper">
-                <img src="Assets/Assets Folder Treact/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="Treact logo" 
-                class="header__logo--img" />
+                <img src="Assets/Assets Folder Treact/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="Treact logo" class="header__logo--img" /> 
+                
               </figure>
             </div>
           </div>
@@ -401,177 +403,198 @@
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua
                 enim ad minim veniam.
               </p>
-              <div class="test__instance">
-                <div class="test__instance--rating">
-                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
-                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
-                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
-                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
-                  <i class="fa-solid fa-star" style="color: #ffd500"></i>
-                </div>
-                <h3 class="test__instance--heading aspect--heading">
-                  Amazing User Experience
-                </h3>
-                <p class="test__instance--para">
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco.
-                </p>
-                <div class="test__instance--panel">
-                  <div class="panel__profile">
-                    <div class="panel__profile--picture">
-                      <figure class="profile__picture--wrapper">
-                        <img src="Assets/Assets Folder Treact/photo-1494790108377-be9c29b29330.avif" alt="" class="profile__picture--img" />
-                      </figure>
+              <div class="test__slider" data-slick>
+                <div class="test__slide">
+                  <div class="test__instance">
+                    <div class="test__instance--rating" aria-label="5 out of 5 stars">
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
                     </div>
-                    <div class="panel__profile--signature">
-                      <h3 class="aspect--heading signature--heading center">
-                        Charlotte Hale
-                      </h3>
-                      <p class="section-para signature--para center">
-                        Director, Delos Inc.
-                      </p>
+                    <h3 class="test__instance--heading aspect--heading">
+                      Amazing User Experience
+                    </h3>
+                    <p class="test__instance--para">
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                    <div class="test__instance--panel">
+                      <div class="panel__profile">
+                        <div class="panel__profile--picture">
+                          <figure class="profile__picture--wrapper">
+                            <img src="Assets/Assets Folder Treact/photo-1494790108377-be9c29b29330.avif" alt="Charlotte Hale" class="profile__picture--img" />
+                          </figure>
+                        </div>
+                        <div class="panel__profile--signature">
+                          <h3 class="aspect--heading signature--heading center">
+                            Charlotte Hale
+                          </h3>
+                          <p class="section-para signature--para center">
+                            Director, Delos Inc.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="panel__buttons">
-                    <i class="fa-solid fa-arrow-left panel__button panel__button--special"></i>
-                    <i class="fa-solid fa-arrow-right panel__button"></i>
+                </div>
+                <div class="test__slide">
+                  <div class="test__instance">
+                    <div class="test__instance--rating" aria-label="5 out of 5 stars">
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                      <i class="fa-solid fa-star" style="color: #ffd500"></i>
+                    </div>
+                    <h3 class="test__instance--heading aspect--heading">
+                      Amazing User Experience
+                    </h3>
+                    <p class="test__instance--para">
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                    <div class="test__instance--panel">
+                      <div class="panel__profile">
+                        <div class="panel__profile--picture">
+                          <figure class="profile__picture--wrapper">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80" alt="Adam Cuppy" class="profile__picture--img" />
+                          </figure>
+                        </div>
+                        <div class="panel__profile--signature">
+                          <h3 class="aspect--heading signature--heading center">
+                            Adam Cuppy
+                          </h3>
+                          <p class="section-para signature--para center">
+                            Founder, Events NYC
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <div class="panel__buttons test__nav" aria-label="Testimonial navigation">
+                <button type="button" class="panel__button panel__button--special test__nav-btn test__nav-btn--prev" aria-label="Previous testimonial">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button type="button" class="panel__button test__nav-btn test__nav-btn--next" aria-label="Next testimonial">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
           </div>
         </div>
       </div>
+    </div>
     </section>
-    <section style="transform: none;">
-        <div class="sc-ezWOiH jwoxv">
-          <div class="sc-bZkfAO jYOvxL">
-            <div class="SingleCol__Column-sc-1i4qirp-3 hhwGMs">
-              <div class="SingleCol__HeaderContent-sc-1i4qirp-4 hfXVYn">
-                <h5 class="sc-dkzDqf SingleCol__Subheading-sc-1i4qirp-0 bUIJbq bhSrBo">
-                  <span class="SaaSProductLandingPage__Subheading-sc-11p3x4w-0 fopWbI">FAQS</span>
-                </h5>
-                <h2 class="sc-gsnTZi SingleCol__Heading-sc-1i4qirp-1 gaeLuF fPVwLP">
-                  "You Have"
-                 <span class="SaaSProductLandingPage__HighlightedText-sc-11p3x4w-1 kcrcBe">Questions?
-                 </span> 
-                 </h2>
-                 <p class="sc-gicCDI SingleCol__Description-sc-1i4qirp-2 cvGnkt dQRFzZ">And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-              </div>
-              <dl class="SingleCol__FAQSContainer-sc-1i4qirp-5 koDYDN">
-                <div class="SingleCol__FAQ-sc-1i4qirp-6 fSCvgS group">
-                  <dt class="SingleCol__Question-sc-1i4qirp-7 dUGOWw">
-                    <span class="SingleCol__QuestionText-sc-1i4qirp-8 lfzDNh">Are all the templates easily customizable ?</span>
-                    <span class="SingleCol__QuestionToggleIcon-sc-1i4qirp-9 fySvpF" style="transform: rotate(-180deg) translateZ(0px);">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                        <polyline points="6 9 12 15 18 9">
-                        </polyline>
+    <section id="faq" class="faq">
+      <div class="faq__shell">
+        <div class="container">
+          <div class="row">
+            <div class="faq__layout">
+              <header class="faq__header">
+                <span class="pre-heading letter-space purple center">FAQS</span>
+                <h2 class="section__heading letter-space steps__heading center">
+                  "You Have" <span class="purple">Questions?</span>
+                </h2>
+                <p class="section-para faq__intro center">
+                  And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </header>
+              <dl class="faq__list">
+                <div class="faq__item group">
+                  <dt class="faq__question">
+                    <span class="faq__question-text">Are all the templates easily customizable ?</span>
+                    <span class="faq__toggle" style="transform: rotate(-180deg) translateZ(0px);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </span>
                   </dt>
-                  <dd class="SingleCol__Answer-sc-1i4qirp-10 dssIHO" style="opacity: 1; height: auto; margin-top: 16px;">
+                  <dd class="faq__answer" style="opacity: 1; height: auto; margin-top: 16px;">
                     Yes, all our templates are designed to be easily customizable. We provide detailed documentation and support to help you make any changes you need.
-                </dd>
+                  </dd>
                 </div>
-                <div class="SingleCol__FAQ-sc-1i4qirp-6 fSCvgS group">
-                  <dt class="SingleCol__Question-sc-1i4qirp-7 dUGOWw">
-                    <span class="SingleCol__QuestionText-sc-1i4qirp-8 lfzDNh">How long do you usually support an standalone template for ?
-                   </span>
-                    <span class="SingleCol__QuestionToggleIcon-sc-1i4qirp-9 fySvpF" style="transform: none;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                        <polyline points="6 9 12 15 18 9">
-                        </polyline>
+                <div class="faq__item group">
+                  <dt class="faq__question">
+                    <span class="faq__question-text">How long do you usually support an standalone template for ?</span>
+                    <span class="faq__toggle" style="transform: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </span>
                   </dt>
-                  <dd class="SingleCol__Answer-sc-1i4qirp-10 dssIHO" style="opacity: 1; height: auto; margin-top: 16px;">
+                  <dd class="faq__answer" style="opacity: 1; height: auto; margin-top: 16px;">
                     We offer 24/7 customer support through email and live chat. Our support team is always ready to assist you with any issues or questions you may have.
-                </dd>
+                  </dd>
                 </div>
-                <div class="SingleCol__FAQ-sc-1i4qirp-6 fSCvgS group">
-                  <dt class="SingleCol__Question-sc-1i4qirp-7 dUGOWw">
-                    <span class="SingleCol__QuestionText-sc-1i4qirp-8 lfzDNh">Do you offer refunds if the customer is not satisfied with the product ?</span>
-                    <span class="SingleCol__QuestionToggleIcon-sc-1i4qirp-9 fySvpF" style="transform: none;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                        <polyline points="6 9 12 15 18 9">
-                        </polyline>
+                <div class="faq__item group">
+                  <dt class="faq__question">
+                    <span class="faq__question-text">Do you offer refunds if the customer is not satisfied with the product ?</span>
+                    <span class="faq__toggle" style="transform: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </span>
                   </dt>
-                  <dd class="SingleCol__Answer-sc-1i4qirp-10 dssIHO" style="opacity: 1; height: auto; margin-top: 16px;">
+                  <dd class="faq__answer" style="opacity: 1; height: auto; margin-top: 16px;">
                     Yes, we offer a 30-day money-back guarantee. If you are not satisfied with our product, you can request a refund within 30 days of purchase.
-                </dd>
+                  </dd>
                 </div>
-                <div class="SingleCol__FAQ-sc-1i4qirp-6 fSCvgS group">
-                  <dt class="SingleCol__Question-sc-1i4qirp-7 dUGOWw">
-                    <span class="SingleCol__QuestionText-sc-1i4qirp-8 lfzDNh">Can I use the templates for commercial projects ?</span>
-                    <span class="SingleCol__QuestionToggleIcon-sc-1i4qirp-9 fySvpF" style="transform: none;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                        <polyline points="6 9 12 15 18 9">
-                        </polyline>
+                <div class="faq__item group">
+                  <dt class="faq__question">
+                    <span class="faq__question-text">Can I use the templates for commercial projects ?</span>
+                    <span class="faq__toggle" style="transform: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </span>
                   </dt>
-                  <dd class="SingleCol__Answer-sc-1i4qirp-10 dssIHO" style="opacity: 1; height: auto; margin-top: 16px;">
+                  <dd class="faq__answer" style="opacity: 1; height: auto; margin-top: 16px;">
                     Yes, you can use our templates for commercial projects. We offer a commercial license that allows you to use our templates in any project, including those that are sold to clients.
-                </dd>
+                  </dd>
                 </div>
-                <div class="SingleCol__FAQ-sc-1i4qirp-6 fSCvgS group">
-                  <dt class="SingleCol__Question-sc-1i4qirp-7 dUGOWw">
-                    <span class="SingleCol__QuestionText-sc-1i4qirp-8 lfzDNh">Do you provide regular updates and new templates ?</span>
-                    <span class="SingleCol__QuestionToggleIcon-sc-1i4qirp-9 fySvpF" style="transform: none;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                        <polyline points="6 9 12 15 18 9">
-                        </polyline>
+                <div class="faq__item group">
+                  <dt class="faq__question">
+                    <span class="faq__question-text">Do you provide regular updates and new templates ?</span>
+                    <span class="faq__toggle" style="transform: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </span>
                   </dt>
-                  <dd class="SingleCol__Answer-sc-1i4qirp-10 dssIHO" style="opacity: 1; height: auto; margin-top: 16px;">
+                  <dd class="faq__answer" style="opacity: 1; height: auto; margin-top: 16px;">
                     Yes, we regularly update our templates and add new ones to our collection. We also listen to customer feedback and make improvements based on their suggestions.
-                </dd>
+                  </dd>
                 </div>
-                <div class="SingleCol__FAQ-sc-1i4qirp-6 fSCvgS group">
-                  <dt class="SingleCol__Question-sc-1i4qirp-7 dUGOWw">
-                    <span class="SingleCol__QuestionText-sc-1i4qirp-8 lfzDNh">What technologies are your templates built with ?</span>
-                    <span class="SingleCol__QuestionToggleIcon-sc-1i4qirp-9 fySvpF" style="transform: none;">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                        <polyline points="6 9 12 15 18 9">
-                        </polyline>
+                <div class="faq__item group">
+                  <dt class="faq__question">
+                    <span class="faq__question-text">What technologies are your templates built with ?</span>
+                    <span class="faq__toggle" style="transform: none;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down" aria-hidden="true">
+                        <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
                     </span>
                   </dt>
-                  <dd class="SingleCol__Answer-sc-1i4qirp-10 dssIHO" style="opacity: 1; height: auto; margin-top: 16px;">
+                  <dd class="faq__answer" style="opacity: 1; height: auto; margin-top: 16px;">
                     Our templates are built using the latest web technologies, including HTML5, CSS3, and JavaScript. We also use popular frameworks like React and Bootstrap to ensure that our templates are modern and responsive.
-                </dd>
+                  </dd>
                 </div>
               </dl>
             </div>
           </div>
-          <svg viewBox="0 0 600 600" class="SingleCol__DecoratorBlob1-sc-1i4qirp-11 fGVMle">
-            <g transform transform transform="translate(300,300)">
-              <path d="M103.9,-95.2C140.4,-67.4,179.7,-33.7,191.6,11.9C203.5,57.5,188,115,151.5,150.2C115,185.4,57.5,198.2,-5.4,203.6C-68.4,209,-136.7,207,-183.4,171.9C-230,136.7,-255,68.4,-233.5,21.6C-211.9,-25.2,-143.8,-50.4,-97.1,-78.3C-50.4,-106.1,-25.2,-136.6,4.2,-140.8C33.7,-145,67.4,-123.1,103.9,-95.2Z" fill="currentColor">
-             </path>
-            </g> 
-         </svg>
-<svg viewBox="0 0 600 600" class="SingleCol__DecoratorBlob2-sc-1i4qirp-12 eXhZsP">
-  <g transform="translate(300,300)">
-    <path d="M134.6,-126.1C171.1,-98.1,195,-49,182.7,-12.4C170.3,24.3,121.6,48.6,85.1,84.6C48.6,120.6,24.3,168.3,-21.9,190.2C-68.1,212.1,-136.2,208.2,-181.1,172.2C-225.9,136.2,-247.5,68.1,-229.7,17.8C-211.9,-32.5,-154.7,-65.1,-109.9,-93.1C-65.1,-121.1,-32.5,-144.5,8.2,-152.8C49,-161,98.1,-154.1,134.6,-126.1Z" fill="currentColor">
-    </path>
-  </g>
-</svg>
-</div>
+        </div>
+        <svg viewBox="0 0 600 600" class="faq__blob faq__blob--1" aria-hidden="true">
+          <g transform="translate(300,300)">
+            <path d="M103.9,-95.2C140.4,-67.4,179.7,-33.7,191.6,11.9C203.5,57.5,188,115,151.5,150.2C115,185.4,57.5,198.2,-5.4,203.6C-68.4,209,-136.7,207,-183.4,171.9C-230,136.7,-255,68.4,-233.5,21.6C-211.9,-25.2,-143.8,-50.4,-97.1,-78.3C-50.4,-106.1,-25.2,-136.6,4.2,-140.8C33.7,-145,67.4,-123.1,103.9,-95.2Z" fill="currentColor"></path>
+          </g>
+        </svg>
+        <svg viewBox="0 0 600 600" class="faq__blob faq__blob--2" aria-hidden="true">
+          <g transform="translate(300,300)">
+            <path d="M134.6,-126.1C171.1,-98.1,195,-49,182.7,-12.4C170.3,24.3,121.6,48.6,85.1,84.6C48.6,120.6,24.3,168.3,-21.9,190.2C-68.1,212.1,-136.2,208.2,-181.1,172.2C-225.9,136.2,-247.5,68.1,-229.7,17.8C-211.9,-32.5,-154.7,-65.1,-109.9,-93.1C-65.1,-121.1,-32.5,-144.5,8.2,-152.8C49,-161,98.1,-154.1,134.6,-126.1Z" fill="currentColor"></path>
+          </g>
+        </svg>
+      </div>
     </section>
-               </div>
-            </div>
-          </div>
-      </section>
-    </div>
     <section id="start">
       <div class="container">
         <div class="row">
@@ -589,7 +612,6 @@
         </div>
       </div>
     </section>
-  </main>
   <footer>
     <div class="container">
       <div class="row">
@@ -655,5 +677,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>
