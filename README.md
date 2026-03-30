@@ -1,5 +1,4 @@
 # Treact Template Project
-https://dlkilfaba-cmyk.github.io/
-http://127.0.0.1:5500/index.html
+https://dlkilfaba-cmyk.github.io/Treact-template-Project/
 
 Starter repository initialized on March 7, 2026.
